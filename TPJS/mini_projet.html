@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        .container {
+            background: whitesmoke;
+            padding: 20px;
+            border: 1px solid whitesmoke;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculer les moyennes</h1>
+        <div id="notesInputs">
+            <input type="number" placeholder="Entrez une note">
+        </div>
+        <button id="addNote">Ajouter une note</button>
+        <button id="CalculerMoyenne">Calculer la Moyenne</button>
+        <p id="resultats"></p>
+    </div>
+    <script>
+        document.getElementById('addNote').onclick = function() {
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.placeholder = 'Entrez une note';
+            document.getElementById('notesInputs').appendChild(input);
+        };
+
+        document.getElementById('CalculerMoyenne').onclick = function() {
+            const inputs = document.querySelectorAll('#notesInputs input');
+            let total = 0;
+            let count = 0;
+
+            for (let i = 0; i < inputs.length; i++) {
+                const value = Number(inputs[i].value);
+                if (value) {
+                    total += value;
+                    count++;
+                }
+            }
+
+            const resultats = count > 0 ? (total / count).toFixed(2) : 'Aucune note valide';
+            document.getElementById('resultats').innerText = resultats;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture et écriture</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veillez entrer un Prénom</h1>
+    <button onclick="EntrezPrenom()">Cliquez ici</button>
+
+    <script>
+        function EntrezPrenom() {
+            var prenom = prompt("Quel est votre prénom ?");
+            if (prenom) {
+                alert("Bienvenue, " + prenom + " !");
+            } else {
+                alert("Vous n'avez pas entré de prénom.");
+            }
+        }
+    </script>
+</body>
+</html>

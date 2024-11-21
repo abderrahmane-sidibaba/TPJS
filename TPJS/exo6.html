@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableaux</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jours de la semaine</h1>
+    <div class="container">
+        <label for="jour">Entrez un numéro entre 1 et 7 :</label>
+        <input type="number" id="jour" min="1" max="7">
+        <button onclick="afficherJour()">Afficher le jour</button>
+    </div>
+
+    <script>
+        function afficherJour() {
+            const joursDeLaSemaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+            
+            const numeroJour = document.getElementById('jour').value;
+
+            if (numeroJour >= 1 && numeroJour <= 7) {
+
+                alert("Le jour correspondant est : " + joursDeLaSemaine[numeroJour - 1]);
+            } else {
+
+                alert("Veuillez entrer un numéro entre 1 et 7.");
+            }
+        }
+    </script>
+</body>
+</html>

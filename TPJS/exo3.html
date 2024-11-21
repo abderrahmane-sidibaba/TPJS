@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions</title>
+  <style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background-color: whitesmoke;
+        margin: auto;
+    }
+    button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Veuillez entrez votre age</h1>
+    <input type="number" id="AgE" placeholder="Entrez votre âge" min="0">
+    <button id="JsAge">Vérifier</button>
+    <p id="resultat" style="color: black;"></p>
+  </div>
+  <script>
+    
+document.getElementById("JsAge").addEventListener("click", function() {
+    let age = document.getElementById("AgE").value;
+    let result = document.getElementById("resultat");
+  if (age < 0){
+    result.textContent = "Veuillez entrer un age valide.";
+    return;
+  }
+  if (age < 18){
+    result.textContent = "Vous etes mineur.";
+  }
+  else{
+    result.textContent = "Vous etes majeur.";
+  }
+  });
+  </script>
+</body>
+</html>

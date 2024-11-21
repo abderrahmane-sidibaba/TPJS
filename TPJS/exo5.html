@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des événements</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cliquez sur le bouton pour afficher une alerte.</h1>
+
+    <button onclick="afficherAlerte()">Cliquez</button>
+
+    <script>
+        function afficherAlerte() {
+            alert("Welcome!");
+        }
+    </script>
+</body>
+</html>

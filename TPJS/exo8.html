@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de l'objet document</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+        background-color: whitesmoke;
+        margin: auto;
+    }
+    button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+    }
+    button:hover {
+        background-color: lightskyblue;
+    }
+</style>
+<body>
+    <h1>Changer la couleur du Background</h1>
+
+    <button onclick="changerCouleur()">Changer Background color</button>
+
+    <script>
+        function changerCouleur() {
+            document.body.style.backgroundColor = "lightskyblue";
+        }
+    </script>
+</body>
+</html>

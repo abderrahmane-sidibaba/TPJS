@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation des variables</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Afficher les valeurs des variables dans la console.</h1>
+    <button onclick="afficherVariables()">Afficher les variables</button>
+
+    <script>
+        var nombre = 42;
+        var texte = "Bonjour!";
+        var estVrai = true;
+
+        function afficherVariables() {
+            console.log("Le nombre est : " + nombre);
+            console.log("Le texte est : " + texte);
+            console.log("Le booléen est : " + estVrai);
+        }
+    </script>
+</body>
+</html>

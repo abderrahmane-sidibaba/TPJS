@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: auto;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire</h1>
+
+    <form id="formulaire" onsubmit="validerFormulaire(event)">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom"><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email"><br><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p id="erreur" style="color: red;"></p>
+
+    <script>
+        function validerFormulaire(event) {
+            event.preventDefault();
+
+            var nom = document.getElementById("nom").value;
+            var email = document.getElementById("email").value;
+
+            if (nom === "" || email === "") {
+                document.getElementById("erreur").innerText = "Tous les champs doivent être remplis !";
+            } else {
+                document.getElementById("erreur").innerText = "";
+                alert("Formulaire envoyé !");
+            }
+        }
+    </script>
+</body>
+</html>
